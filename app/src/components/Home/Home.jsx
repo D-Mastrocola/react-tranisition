@@ -1,6 +1,21 @@
+import React, { useState, useEffect } from 'react';
+import anime from "animejs";
+
 import Header from "../Header/Header";
 
 let Home = () => {
+  useEffect(() => {
+    anime({
+      targets: "#animation-div",
+      opacity: 0,
+      duration: 800,
+      easing: 'linear',
+      complete: function() {
+        let animationDiv = document.getElementById('animation-div');
+        animationDiv.style.zIndex = -5;
+      }
+    });
+  })
   return (
     <>
       <Header />

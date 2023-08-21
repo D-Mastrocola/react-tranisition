@@ -1,6 +1,16 @@
 html, body {
   margin: 0;
 }
+#animation-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(40, 153, 17);
+  z-index: 10;
+  opacity: 1;
+}
 header {
   height: 80px;
   background-color: rgb(40, 153, 17);
@@ -21,12 +31,17 @@ header ul {
   align-items: center;
   margin: 0 5em;
 }
-header ul li {
+header ul li button {
+  background: none;
+  border: none;
+  outline: none;
   padding: 0 2em;
   font-size: 1.1em;
+  color: white;
 }
-header ul li:hover {
+header ul li button:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 main {
   padding: 0em 5em;
